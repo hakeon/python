@@ -10,11 +10,18 @@ def is_palindrome_v3(s):
     >>> is_palindrome_v3('dented')
     False
     """
-    # The number of chars in s.
-    n = len(s)
-    # Compare the first half of s to the reverse of the second half
-    # Omit the middle character of an odd-length string.
-    return s[:n // 2] == reverse(s[n - (n // 2):])
+    # var beginning of string
+    i = 0
+    # var end of string
+    j = len(s)-1
+
+    # Loop iterates as long as the letters in each half match until all letters are checked.
+    while i < j and s[i] == s[j]:
+        i = i + 1
+        j = j - 1
+
+    # If the loop completed with J <= i, then the word must be a palindrome.
+    return j <= i
 
 def reverse(s):
     """ (str) -> str
