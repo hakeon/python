@@ -1,4 +1,5 @@
 import random
+import pylab
 #----------------------------------------------------------------------
 def flipPlot(minExp, maxExp):
     """Assumes minExp and maxExp positive integers; minExp < maxExp
@@ -19,13 +20,13 @@ def flipPlot(minExp, maxExp):
         diffs.append(abs(numHeads - numTails))
     
     pylab.title('Difference Between Heads & Tails')
-    pylab.xlable('Number of Flips')
-    pylab.ylable('Abs(#Heads - #Tails)')
+    pylab.xlabel('Number of Flips')
+    pylab.ylabel('Abs(#Heads - #Tails)')
     pylab.plot(xAxis, diffs)
     pylab.figure()
     pylab.title('Heads/Tails Ratios')
-    pylab.xlable('Number of Flips')
-    pylab.ylable('#Heads/#Tails')
+    pylab.xlabel('Number of Flips')
+    pylab.ylabel('#Heads/#Tails')
     pylab.plot(xAxis, ratios)
     
 random.seed(0)

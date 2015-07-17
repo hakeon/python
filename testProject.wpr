@@ -11,3 +11,7 @@ proj.directory-list = [{'dirloc': loc('.'),
                         'recursive': True,
                         'watch_for_changes': True}]
 proj.file-type = 'shared'
+proj.launch-config = {loc('plotFlip.py'): ('project',
+        (u'flipPlot(10,100)',
+         ''))}
+proj.main-file = loc('plotFlip.py')
